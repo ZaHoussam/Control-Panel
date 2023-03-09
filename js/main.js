@@ -18,3 +18,16 @@ document.querySelector(".light-dark").onclick = function () {
     localStorage.removeItem("dark-mode");
   }
 };
+
+// Up Button
+window.onscroll = function () {
+  this.scrollY > 440
+    ? document.getElementById("up").classList.add("show")
+    : document.getElementById("up").classList.remove("show");
+};
+document.getElementById("up").onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};

@@ -179,3 +179,41 @@ input[type="radio"] {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
+
+.up{
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    right: 10px;
+    background-color: #2196f3;
+    color: var(--bg);
+    justify-content: center;
+    cursor: pointer;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+}
+.up.show{
+      visibility: visible;
+    opacity: 1;
+}
+    .up::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color:  var(--blue);
+    z-index: -1;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+    left: 0;
+}
+    .page.dark .up::before{
+      background-color: var(--dark-mode-alt-two);
+    }
+.up:hover::before{
+  width: 100%;
+}
