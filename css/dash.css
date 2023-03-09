@@ -650,3 +650,7 @@
   background: none;
   color: var(--bg);
 }
+
+.content.dark .content-table tbody tr:hover {
+  background-color: var(--dark-mode-alt-two);
+}
