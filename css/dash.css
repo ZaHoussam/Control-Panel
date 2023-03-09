@@ -651,6 +651,7 @@
   color: var(--bg);
 }
 
-.content.dark .content-table tbody tr:hover {
+.content.dark .content-table tbody tr:hover,
+.content.dark .content-table thead tr {
   background-color: var(--dark-mode-alt-two);
 }
