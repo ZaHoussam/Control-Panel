@@ -192,6 +192,7 @@ input[type="radio"] {
     position: fixed;
     visibility: hidden;
     opacity: 0;
+    z-index: 100;
 }
 .up.show{
       visibility: visible;
