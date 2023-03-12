@@ -86,6 +86,56 @@
   color: var(--orange);
 }
 
+.uplaod-part a {
+  width: 95px;
+  margin: 20px auto;
+  padding: 10px;
+  font-weight: 600;
+  background-color: #2196f3;
+  z-index: 3;
+}
+.uplaod-part a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  background-color: var(--blue);
+  z-index: -1;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.uplaod-part a:hover::before {
+  width: 100%;
+}
+.uplaod-part a:hover i {
+  animation: up 0.3s alternate infinite;
+  -webkit-animation: up 0.3s alternate infinite;
+}
+.uplaod-part a span {
+}
+/* animation */
+@keyframes up {
+  from {
+    top: 0;
+  }
+  to {
+    top: -5px;
+  }
+}
+
 @media (max-width: 991px) {
   .content > div {
     flex-direction: column;
